@@ -335,3 +335,42 @@ html:not(.js) .hs__p, html:not(.js) .hs__cta { opacity: 1; transform: none; }
 .reps__grid > * { min-width: 0; }
 .field select { min-width: 0; max-width: 100%; }
 @media (max-width: 1024px) { .reps__grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* =====================================================================
+   TÍTULOS EM MONTSERRAT: a mesma fonte do site atual da Mill.
+   Sem largura expandida e sem itálico; o destaque fica só no amarelo.
+   ===================================================================== */
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(fonts/montserrat.woff2) format('woff2'); }
+:root { --fd: 'Montserrat', 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+
+.h2, .hs__t, .phero__t, .dcard__t, .cta__t, .rz__words, .rz__big, .stats__n, .score__n, .proof__score, .fair,
+.footer__mark span, .mnav__links a, .mgroup__link, .ritem__t, .post__t, .step__t, .tile h3, .fres__name, .dr__name,
+.modal__t, .cform__t, .clist b, .pcard__name, .tech__claim, .svc h4, .reps__head b, .partner__t, .inst__card h3,
+.mega__promo b, .statement h2, .statement__t {
+  font-family: var(--fd); font-stretch: normal; font-style: normal;
+}
+.h2 em, .hs__t em, .phero__t em, .dcard__t em, .cta__t em, .rz__w--r, .statement em { font-style: normal; }
+.cta__t em { font-weight: inherit; }
+
+/* pesos e tamanhos para a Montserrat (mais larga que a Archivo normal) */
+.hs__t { font-size: clamp(38px, 4.9vw, 80px); font-weight: 800; letter-spacing: -.028em; line-height: 1.02; }
+.phero__t { font-size: clamp(36px, 4.5vw, 72px); font-weight: 800; letter-spacing: -.028em; line-height: 1.03; }
+.h2 { font-size: clamp(32px, 4.3vw, 64px); font-weight: 800; letter-spacing: -.026em; line-height: 1.05; }
+.cta__t { font-size: clamp(36px, 4.8vw, 74px); font-weight: 800; letter-spacing: -.028em; line-height: 1.03; }
+.dcard__t { font-size: clamp(26px, 2.6vw, 38px); font-weight: 800; letter-spacing: -.022em; line-height: 1.08; }
+.rz__words { font-size: clamp(30px, 4.6vw, 78px); font-weight: 800; letter-spacing: -.03em; }
+.rz__big { font-weight: 800; letter-spacing: -.04em; }
+.stats__n { font-size: clamp(44px, 4.8vw, 80px); font-weight: 700; letter-spacing: -.035em; }
+.score__n { font-size: 58px; font-weight: 800; letter-spacing: -.04em; }
+.proof__score { font-size: clamp(92px, 10.5vw, 160px); font-weight: 800; letter-spacing: -.05em; }
+.fair { font-size: clamp(30px, 3.8vw, 56px); font-weight: 800; letter-spacing: -.02em; }
+.footer__mark span { font-weight: 900; letter-spacing: -.03em; font-size: clamp(130px, 25vw, 400px); }
+.mnav__links a, .mgroup__link { font-weight: 700; letter-spacing: -.025em; }
+.ritem__t, .step__t, .tile h3, .cform__t, .fres__name, .dr__name, .modal__t, .clist b { font-weight: 700; letter-spacing: -.02em; }
+.post__t, .pcard__name, .svc h4, .reps__head b, .partner__t, .inst__card h3, .tech__claim, .mega__promo b { font-weight: 700; letter-spacing: -.015em; }
+@media (max-width: 768px) {
+  .hs__t { font-size: clamp(32px, 9.4vw, 46px); }
+  .phero__t { font-size: clamp(31px, 9vw, 44px); }
+  .h2, .cta__t { font-size: clamp(29px, 8.4vw, 42px); }
+}
+@media (max-width: 560px) { .rz__big { font-size: 13.6vw; } }
